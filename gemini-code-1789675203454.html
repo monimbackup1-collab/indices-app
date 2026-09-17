@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couples Compatibility & Vibe Indices</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Screen -->
+        <div id="home-screen" class="card">
+            <h1>Compatibility & Vibe Indices</h1>
+            <p>Select an index below to test your personality score!</p>
+            <div id="index-list" class="grid-buttons"></div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="card hidden">
+            <button class="btn-secondary back-btn" onclick="showHome()">← Back to Menu</button>
+            <h2 id="quiz-title"></h2>
+            <p id="quiz-subtitle" class="subtitle"></p>
+            
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            
+            <form id="quiz-form">
+                <div id="questions-container"></div>
+                <button type="submit" class="btn-primary">Calculate My Score</button>
+            </form>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="card hidden">
+            <h2>Your Final Result</h2>
+            <div class="score-display">
+                <span id="score-val">0</span>
+                <span class="score-label">Total Points</span>
+            </div>
+            
+            <div id="result-tier-box" class="tier-box">
+                <h3 id="tier-title"></h3>
+                <p id="tier-desc"></p>
+            </div>
+
+            <!-- Interactive Tier Explorer -->
+            <div class="explorer-section">
+                <h4>Explore Other Score Tiers</h4>
+                <p class="explorer-sub">Click a tier below to see what your result would have been in a different point range:</p>
+                <div id="tier-buttons" class="grid-buttons"></div>
+                <div id="explorer-output" class="explorer-box hidden">
+                    <h4 id="explorer-title"></h4>
+                    <p id="explorer-desc"></p>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-secondary" onclick="restartCurrentQuiz()">Retake Quiz</button>
+                <button class="btn-primary" onclick="showHome()">Try Another Index</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
